@@ -17,6 +17,8 @@ void (async function bootstrap() {
     .setVersion('0.0')
     .build();
   const documentSwagger = SwaggerModule.createDocument(app, swaggerConfig);
-  SwaggerModule.setup('api', app, documentSwagger);
+  SwaggerModule.setup('api', app, documentSwagger, {
+    customCss: '.swagger-ui .topbar {display: none;}',
+  });
   await app.listen(process.env.PORT ?? 4000);
 })();
