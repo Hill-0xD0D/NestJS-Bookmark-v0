@@ -20,9 +20,9 @@ model User {
   id Int @id @default(autoincrement())
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
+
   email String 
   password String
-
   firstName String?
   lastName String?
 }
