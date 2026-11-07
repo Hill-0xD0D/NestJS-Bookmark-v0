@@ -8,15 +8,10 @@ export class AuthService {
   login() {
     return { message: `I'm loggin ...` };
   }
-  signup() {
-    const userData = {
-      email: String,
-      password: String,
-      firstName: String,
-      lastName: String,
-    };
-
-    console.log(userData);
+  signup(bodyData) {
+    if (bodyData) {
+      console.log(`SignUp AuthService: ${JSON.stringify(bodyData)}`);
+    }
     return { message: `I'm sign up! ` };
   }
 
