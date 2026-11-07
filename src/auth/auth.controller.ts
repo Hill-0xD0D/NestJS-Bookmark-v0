@@ -8,7 +8,6 @@ export class AuthController {
 
   @Post('signup')
   signup(@Body() bodyDto: AuthDTO) {
-    console.log('SignUp AuthController: ', bodyDto ?? 'No body provided!!');
     return this.authService.signup(bodyDto);
   }
 
